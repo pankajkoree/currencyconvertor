@@ -22,7 +22,7 @@ function InputBox({
         </label>
         <input
           id={amountInputId}
-          type="number"
+          type="text"
           disabled={amountDisable}
           className="w-[117.938px] sm:w-[150px]  md:w-[150px] pl-5 rounded-lg h-[40px] mx-5 shadow-2xl border-2"
           value={amount}
