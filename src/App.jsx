@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import InputBox from "./components/InputBox";
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
 
@@ -44,7 +44,6 @@ function App() {
 
   const currencyInfo = useCurrencyInfo(from, to);
   const getConvertedValue = () => {
-    console.log(currencyInfo);
     setConvertedAmount(amount * currencyInfo);
   };
   const swap = (e) => {
@@ -68,14 +67,11 @@ function App() {
             amount={amount}
             className=""
             onAmountChange={(amount) => {
-              console.log(amount);
               setAmount(amount);
             }}
             currencyOptions={options}
             onCurrencyChange={(currency) => {
-              console.log(currency);
               setFrom(currency);
-              console.log(from);
             }}
             amountDisable={false}
             required
@@ -91,9 +87,7 @@ function App() {
             amount={convertedAmount}
             currencyOptions={options}
             onCurrencyChange={(currency) => {
-              console.log(currency);
               setTo(currency);
-              console.log(currency);
             }}
             amountDisable
           />
